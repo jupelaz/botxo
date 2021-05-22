@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Preparing an interview with [BotXO](https://www.botxo.ai/job/front-end-developers/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I'm getting ready for an interview with BotXO team for the current [role](https://www.botxo.ai/job/front-end-developers/). They provide a AI Chatbot builder to their clients, and their application, as the offer tells, uses React v.16, Redux, Webpack, Enzyme, Azure Dev Ops, Storybook, jest, enzyme, sentry, playwright framework, cypress, SSR, GraphQL(Relay), RESTful APIs, NPM, Babel, AWS, Docker, Elastic Search, Elastic beanstalk.
 
-## Available Scripts
+So I will try to use the most of them in this app.
 
-In the project directory, you can run:
+As their app is a Chatbot, it would be fine to implement a react-chatbot. Looking in google, the easiest ocurrence is [react-simple-chatbox](https://github.com/lucasbassetti/react-simple-chatbot). So I will try to implement that, and from there, use the other tools.
 
-### `yarn start`
+Wish me luck.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##First issues
+The current version of React is 17.0.2, and the version needed for react-simple-chatbot is 16.3.0. So I removed all the uneeded (by now) npm packages, and only keep the following
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```JSON
+  "dependencies": {
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-scripts": "^4.0.3",
+    "react-simple-chatbot": "^0.6.1"
+  }
+```
 
-### `yarn test`
+and replace the default react app with the example:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```javascript
+import ChatBot from 'react-simple-chatbot'
 
-### `yarn build`
+const steps = [
+  {
+    id: '0',
+    message: 'Welcome to react chatbot!',
+    trigger: '1',
+  },
+  {
+    id: '1',
+    message: 'Bye!',
+    end: true,
+  },
+]
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+function App() {
+  return (
+    <div>
+      <ChatBot steps={steps} />
+    </div>
+  )
+}
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+export default App
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Giving this result:
+![Imgur](https://i.imgur.com/8tXYMm2.png)
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I will upload this first version to github, and set it as a starting point.
