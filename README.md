@@ -8,7 +8,7 @@ As their app is a Chatbot, it would be fine to implement a react-chatbot. Lookin
 
 Wish me luck.
 
-##First issues
+## First issues
 The current version of React is 17.0.2, and the version needed for react-simple-chatbot is 16.3.0. So I removed all the uneeded (by now) npm packages, and only keep the following
 
 ```JSON
