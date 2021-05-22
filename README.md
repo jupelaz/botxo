@@ -69,4 +69,4 @@ They are integrated in create-react-app, so it feels like loading them twice for
 
 I will integrate redux without using it, as I dont need it now. And, because I havent used Storybook yet, I will integrate it first.
 
-After installing it, seems like a cool way to document new components. As in this project, by now, I only use a external component, don´t have any "homemade" components to add, so I will keep the default ones. As earlier said, I will add a empty Redux. I will add redux-devtools-extension and redux-thunk, one for added info in Chrome, and the other is a redux-middleware to allow redux to make asyn actions. So I made a Redux store
+After installing it, seems like a cool way to document new components. As in this project, by now, I only use a external component, don´t have any "homemade" components to add, so I will keep the default ones. As earlier said, I will add a empty Redux. I will add redux-devtools-extension and redux-thunk, one for added info in Chrome, and the other is a redux-middleware to allow redux to make asyn actions. So I made a Redux store. Also, added a wider example for the chatbot.
